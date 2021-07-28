@@ -16,8 +16,37 @@ A P3 számítógépen futó vezérlő program, amely Python 2 -ben íródott. Az
 python2.7 /home/pi/arbo/p3.py &>/dev/null &
 ```
 
-arbo/html
-A webkiszolgáló fáljai ebben a könyvtárban vannak, amelyeknek a szerveroldali része php-vel megvalósított.
+arbo/html/
+A webkiszolgáló fáljai ebben a könyvtárban vannak, amelyeknek a szerveroldali része php-vel megvalósított. 
+
+arbo/html/data.php
+Az adatbázisban tárolt legutóbbi adatértékek kérdezhetőek le az API-val json formátumban.
+
+arbo/html/index.php
+Az vezérlések indítását és végrehajtását végi el ez az API. A meghívott parancs praméterei POST változók, amelyek feldolgozásra kerülnek.
+
+arbo/html/vezerlo.php
+A vezérlő dashboard felületét tartalmazza ez a php fájl. Az adatok változásának megjelenítését, és a funkciók indítását az "arbo/html/js/vezerlok.js" végzi, amely egy javascript osztály JQuery elemekkel.
+
+arbo/html/pid.php
+A kapcsolási rajz nézetet tartalmazza. Hozzá tartozik a "arbo/html/js/pid.js" javascript osztály JQuery elemekkel.
+
+arbo/html/vezerlo/
+A könytárban megtalálhatók a vezérlések szerveroldali része php fájlokban (pl: mérés,savazás,kézi üzemmód), valamint a szelep vezérlő elemek státuszának lekérdezése (nyitott,zárt,köztes állapotú).
+
+arbo/html/js/
+A könytárban megtalálhatók a JQuery/javascript osztályok és lib fájlok (jquery, charts, bootstrap).
+
+arbo/html/img/
+A könyvtárban megtalálhatók a kapcsolási rajz nézet ikonjai, és háttérképe.
+
+További fájlok az arbo/html/ könyvtárban:
+login.php - A bejelentkezés felülete
+nyofdata.php - A P4 értékeit lekérdező API, amely helyből, ajax hívással is hívható
+dummy.php - a dashboard-on található egyéb karbantartó funkciók (pl: számítógép pingelése, hard reset)
+passreplace.php - a jelszó csere felülete
+usrmngmt.php - a felhasználói adminisztráció felülete
+
 
 arbo/db/arbo.sql
 A P3 számítógépen található mysql adatbázis létrehozására szolgál. Az adatbázis hozzáférési paramétereit az arbo/html/config/Config.php -ben is át kell írni.
@@ -166,6 +195,13 @@ requests.post("http://............./nyof_alarm.php", data={'pw': smsPass, 'msg':
 ...
 requests.post("http://............./nyof_alarm.php", data={'pw': smsPass, 'msg': '3'})
 ```
+
+nyof/php
+A P4 webkiszolgálón elhelyezendő php fájlok. 
+
+nyof/php/index.php 
+Ez az api visszaadja a kiolvasott adatokat json formában.
+
 
 nyof/sms/
 A könytárban található fájlok bármelyik webkiszolgálóra elhelyezhetők, a fenti végpontot ennek megfelelően kell beállítani.
