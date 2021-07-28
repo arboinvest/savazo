@@ -1,0 +1,18 @@
+
+...
+...
+...
+
+[all]
+
+hdmi_force_hotplug=1
+dtoverlay=disable-wifi
+dtoverlay=pi3-disable-bt
+
+dtoverlay=w1-gpio,gpiopin=16
+dtoverlay=w1-gpio,gpiopin=17
+
+
+#enable uart interface
+enable_uart=1
+

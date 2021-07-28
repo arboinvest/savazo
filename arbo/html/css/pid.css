@@ -1,0 +1,37 @@
+.szamok {
+	font-size: 10pt;
+	color: red;
+	font-weight: bold;
+}
+.inaktiv {
+	font-size: 10pt;
+	color: #B0B0B0;
+	font-style: italic;
+}
+.ora {
+	font-size: 14pt;
+	color: black;
+	font-weight: bold;
+}
+.indicator {
+	font-size: 8pt;
+	color: black;
+	font-weight: bold;
+	font-family: 'Courier New', monospace;
+}
+.vezerlo {
+	font-size: 14pt;
+	font-weight: bold;
+}
+.vegallas {
+	font-size: 7pt;
+	font-weight: bold;
+}
+.riasztas {
+	font-size: 22pt;
+	color: red;
+	font-weight: bold;
+}
+.floating {
+	position: absolute;
+}
