@@ -16,40 +16,39 @@ A P3 számítógépen futó vezérlő program, amely Python 2 -ben íródott. Az
 python2.7 /home/pi/arbo/p3.py &>/dev/null &
 ```
 
-arbo/html/
-A webkiszolgáló fáljai ebben a könyvtárban vannak, amelyeknek a szerveroldali része php-vel megvalósított. 
-
-arbo/html/data.php
-Az adatbázisban tárolt legutóbbi adatértékek kérdezhetőek le az API-val json formátumban.
-
-arbo/html/index.php
-Az vezérlések indítását és végrehajtását végi el ez az API. A meghívott parancs praméterei POST változók, amelyek feldolgozásra kerülnek.
-
-arbo/html/vezerlo.php
-A vezérlő dashboard felületét tartalmazza ez a php fájl. Az adatok változásának megjelenítését, és a funkciók indítását az "arbo/html/js/vezerlok.js" végzi, amely egy javascript osztály JQuery elemekkel.
-
-arbo/html/pid.php
-A kapcsolási rajz nézetet tartalmazza. Hozzá tartozik a "arbo/html/js/pid.js" javascript osztály JQuery elemekkel.
-
-arbo/html/vezerlo/
-A könytárban megtalálhatók a vezérlések szerveroldali része php fájlokban (pl: mérés,savazás,kézi üzemmód), valamint a szelep vezérlő elemek státuszának lekérdezése (nyitott,zárt,köztes állapotú).
-
-arbo/html/js/
-A könytárban megtalálhatók a JQuery/javascript osztályok és lib fájlok (jquery, charts, bootstrap).
-
-arbo/html/img/
-A könyvtárban megtalálhatók a kapcsolási rajz nézet ikonjai, és háttérképe.
-
-További fájlok az arbo/html/ könyvtárban:
-login.php - A bejelentkezés felülete
-nyofdata.php - A P4 értékeit lekérdező API, amely helyből, ajax hívással is hívható
-dummy.php - a dashboard-on található egyéb karbantartó funkciók (pl: számítógép pingelése, hard reset)
-passreplace.php - a jelszó csere felülete
-usrmngmt.php - a felhasználói adminisztráció felülete
-
-
-arbo/db/arbo.sql
-A P3 számítógépen található mysql adatbázis létrehozására szolgál. Az adatbázis hozzáférési paramétereit az arbo/html/config/Config.php -ben is át kell írni.
+arbo/html/\
+A webkiszolgáló fáljai ebben a könyvtárban vannak, amelyeknek a szerveroldali része php-vel megvalósított. \
+\
+arbo/html/data.php\
+Az adatbázisban tárolt legutóbbi adatértékek kérdezhetőek le az API-val json formátumban.\
+\
+arbo/html/index.php\
+Az vezérlések indítását és végrehajtását végi el ez az API. A meghívott parancs praméterei POST változók, amelyek feldolgozásra kerülnek.\
+\
+arbo/html/vezerlo.php\
+A vezérlő dashboard felületét tartalmazza ez a php fájl. Az adatok változásának megjelenítését, és a funkciók indítását az "arbo/html/js/vezerlok.js" végzi, amely egy javascript osztály JQuery elemekkel.\
+\
+arbo/html/pid.php\
+A kapcsolási rajz nézetet tartalmazza. Hozzá tartozik a "arbo/html/js/pid.js" javascript osztály JQuery elemekkel.\
+\
+arbo/html/vezerlo/\
+A könytárban megtalálhatók a vezérlések szerveroldali része php fájlokban (pl: mérés,savazás,kézi üzemmód), valamint a szelep vezérlő elemek státuszának lekérdezése (nyitott,zárt,köztes állapotú).\
+\
+arbo/html/js/\
+A könytárban megtalálhatók a JQuery/javascript osztályok és lib fájlok (jquery, charts, bootstrap).\
+\
+arbo/html/img/\
+A könyvtárban megtalálhatók a kapcsolási rajz nézet ikonjai, és háttérképe.\
+\
+További fájlok az arbo/html/ könyvtárban:\
+login.php - A bejelentkezés felülete\
+nyofdata.php - A P4 értékeit lekérdező API, amely helyből, ajax hívással is hívható\
+dummy.php - a dashboard-on található egyéb karbantartó funkciók (pl: számítógép pingelése, hard reset)\
+passreplace.php - a jelszó csere felülete\
+usrmngmt.php - a felhasználói adminisztráció felülete\
+\
+arbo/db/arbo.sql\
+A P3 számítógépen található mysql adatbázis létrehozására szolgál. Az adatbázis hozzáférési paramétereit az arbo/html/config/Config.php -ben is át kell írni.\
 ```
 ...
 	const MYSQL_HOST = 'localhost';
@@ -79,11 +78,11 @@ A P3 számítógép port kiosztása:
 |Indukciós áramlásmérő|A3| | |
 |Nyomásmérő 1.|A4| | |
 |Nyomásmérő 2.|A5| | |
-
-ahol:
-Axx: Analóg portok
-Gxx: GPIO digitális portok
-
+\
+ahol:\
+Axx: Analóg portok\
+Gxx: GPIO digitális portok\
+\
 A "/boot/config.txt" tartalma A P3-an:
 ```
 ...
@@ -95,7 +94,7 @@ gpio=22=op,dh
 ```
 
 ### 1.2 A P2 számítógép
-arbo/bin/vezerlok/p2.py 
+arbo/bin/vezerlok/p2.py \
 A P2 számítógép vezérlő programja, amely Python 2 -ben íródott. Az indítás rögtön a boot-olás után megtörténik, ezt az /etc/rc.local-ba kell belerakni.
 ```
 python2.7 /home/pi/arbo/p2.py &>/dev/null &
@@ -141,7 +140,7 @@ gpio=17=op,dh
 
 
 ### 1.3 A P1 számítógép
-arbo/bin/vezerlok/p1.py 
+arbo/bin/vezerlok/p1.py \
 A P1 számítógép vezérlő programja, amely Python 2 -ben íródott. Az indítás rögtön a boot-olás után megtörténik, ezt az /etc/rc.local-ba kell belerakni.
 ```
 python2.7 /home/pi/arbo/p1.py &>/dev/null &
@@ -176,9 +175,9 @@ A P1 számítógép port kiosztása:
 
 ### 1.4 A P4 számítógép
 
-nyof/P4:
-A P4 vezérlő programja. Feladata, hogy a kiolvasott értékeket biztosítsa a P3 felé.
-
+nyof/P4:\
+A P4 vezérlő programja. Feladata, hogy a kiolvasott értékeket biztosítsa a P3 felé.\
+\
 A programban szükséges beállítani az egyik hőmérséklet érzékelő elérését, valamint az sms küldéshez használt számítógép végpont elérését.
 
 ```
@@ -196,15 +195,15 @@ requests.post("http://............./nyof_alarm.php", data={'pw': smsPass, 'msg':
 requests.post("http://............./nyof_alarm.php", data={'pw': smsPass, 'msg': '3'})
 ```
 
-nyof/php
-A P4 webkiszolgálón elhelyezendő php fájlok. 
-
-nyof/php/index.php 
-Ez az api visszaadja a kiolvasott adatokat json formában.
-
-
-nyof/sms/
-A könytárban található fájlok bármelyik webkiszolgálóra elhelyezhetők, a fenti végpontot ennek megfelelően kell beállítani.
+nyof/php\
+A P4 webkiszolgálón elhelyezendő php fájlok. \
+\
+nyof/php/index.php \
+Ez az api visszaadja a kiolvasott adatokat json formában.\
+\
+\
+nyof/sms/\
+A könytárban található fájlok bármelyik webkiszolgálóra elhelyezhetők, a fenti végpontot ennek megfelelően kell beállítani.\
 A "send.js" - NodeJs-ben íródott - program végzi el végül az sms küldést, ezért erre a számítógépre NodeJs-t kell telepíteni, és a fájlban be kell állítani milyen telefonszámról és melyik telefonszámra küldje az sms-t.
 
 ```
