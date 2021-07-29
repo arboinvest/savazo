@@ -120,7 +120,7 @@ A "boot/config.txt" tartalma A P1-en és P2-n:
 ...
 hdmi_force_hotplug=1
 enable_uart=1
-dtoverlay=w1-gpio,pullup="2",gpiopin=27
+dtoverlay=w1-gpio,pullup="on",gpiopin=27
 dtoverlay=disable-wifi
 dtoverlay=pi3-disable-bt
 gpio=18=op,dl
