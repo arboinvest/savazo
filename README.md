@@ -224,10 +224,10 @@ var postData = {
 };
 ```
 
-Az sms api regisztrációt a következő helyen lehet elvégezni:
-```
-https://developers.sinch.com/docs/sms/getting-started/node/nodesend/
-```
+Az sms api regisztrációt a következő helyen lehet elvégezni:\
+\
+[https://developers.sinch.com/docs/sms/getting-started/node/nodesend/](https://developers.sinch.com/docs/sms/getting-started/node/nodesend/)
+\
 A regisztrációt követően a "send.js" fájlban az sms api hívást a megfelelő Id azonosítóra kell átírni.
 
 
