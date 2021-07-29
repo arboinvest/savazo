@@ -66,6 +66,7 @@ A P3 számítógép port kiosztása:
 
 |Megnevezés|Port| 0 | 1 |
 |------------------------------|-----|-------------------|----------------|
+|Sav keringtető szivattyú|G22|Szivattyú jár|Szivattyú áll|
 |P1 reset|G20|P1 off|P1 on|
 |P2 reset|G19|P2 off|P2 on|
 |Átfolyásmérő LOW riasztás|G17|túl kevés átfolyás|normál átfolyás|
