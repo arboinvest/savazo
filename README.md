@@ -224,8 +224,8 @@ A "send.js" - NodeJs-ben íródott - program végzi el végül az sms küldést,
 
 ```
 var postData = {
-  from: "...CELL PHONE NUMBER...",
-  to: ["...CELL PHONE NUMBER...  ."],
+  from: "****SENDER*PHONE*ADDRESS******",
+  to: ["***RECIPIENT*PHONE*ADDRESS*****"],
   body: "",
 };
 ```
