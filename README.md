@@ -110,6 +110,10 @@ g27Path = '/sys/bus/w1/devices/' + g27 + '/w1_slave'
 g25Path = '/sys/bus/w1/devices/' + g25 + '/w1_slave'...
 ...
 ```
+A hőmérséklet érzékelők listázása:
+```
+ls /sys/bus/w1/devices/ | grep -
+```
 
 A "boot/config.txt" tartalma A P1-en és P2-n:
 ```
