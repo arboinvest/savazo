@@ -195,6 +195,16 @@ requests.post("http://............./nyof_alarm.php", data={'pw': smsPass, 'msg':
 requests.post("http://............./nyof_alarm.php", data={'pw': smsPass, 'msg': '3'})
 ```
 
+A /boot/config.txt beállításai:\
+```
+hdmi_force_hotplug=1
+dtoverlay=disable-wifi
+dtoverlay=pi3-disable-bt
+dtoverlay=w1-gpio,gpiopin=16
+dtoverlay=w1-gpio,gpiopin=17
+enable_uart=1
+```
+
 nyof/php\
 A P4 webkiszolgálón elhelyezendő php fájlok. \
 \
