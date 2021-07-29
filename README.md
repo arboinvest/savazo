@@ -52,14 +52,14 @@ A P3 számítógépen található mysql adatbázis létrehozására szolgál. Az
 ```
 ...
 	const MYSQL_HOST = 'localhost';
-	const MYSQL_USER = 'root';
-	const MYSQL_PASSWORD = 'mypass';
+	const MYSQL_USER = '****';
+	const MYSQL_PASSWORD = '******';
 	const MYSQL_DB = 'arbo';
 ...
 ```
 Szintén itt kell beállítani a P4 számítógép végpont elérését.
 ```
-const NYOF_URL = 'http://192.168.2.172:80';
+const NYOF_URL = 'http://***.***.***.***:**';
 ```
 
 A P3 számítógép port kiosztása:
@@ -104,7 +104,7 @@ python2.7 /home/pi/arbo/p2.py &>/dev/null &
 A vezérlő programban szükséges megadni a P3 helyi ip címét, valamint a hőmérséklet érzékelők elérését a /sys/bus/w1 könyvtárból.
 ```
 ...
-serverURL = '192.168.5.153'
+serverURL = '***.***.***.***'
 ...
 g27 = '..-............'
 g25 = '..-............'
@@ -154,7 +154,7 @@ python2.7 /home/pi/arbo/p1.py &>/dev/null &
 A vezérlő programban szükséges megadni a P3 helyi ip címét, valamint a hőmérséklet érzékelők elérését a /sys/bus/w1 könyvtárból.
 ```
 ...
-serverURL = '192.168.5.153'
+serverURL = '***.***.***.***'
 ...
 g27 = '..-............'
 g25 = '..-............'
