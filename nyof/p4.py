@@ -120,22 +120,26 @@ while True:
     if a5Value < 10.0:
         riaszt = '0'
         if (a5Value > 8.0) and (not smsSent1):
-            requests.post("http://192.168.2.172/nyof_alarm.php", data={'pw': smsPass, 'msg': '1'})
+            # sms sender api url with IP address
+            requests.post("http://***.***.***.***/nyof_alarm.php", data={'pw': smsPass, 'msg': '1'})
             smsSent1 = True
             smsPar1 = "1"
         elif (a5Value <= 0.05) and (not smsSent4):
-            requests.post("http://192.168.2.172/nyof_alarm.php", data={'pw': smsPass, 'msg': '4'})
+            # sms sender api url with IP address
+            requests.post("http://***.***.***.***/nyof_alarm.php", data={'pw': smsPass, 'msg': '4'})
             smsSent4 = True
             smsPar4 = "1"
     else:
         riaszt = '1'
         if not smsSent2:
-            requests.post("http://192.168.2.172/nyof_alarm.php", data={'pw': smsPass, 'msg': '2'})
+            # sms sender api url with IP address
+            requests.post("http://***.***.***.***/nyof_alarm.php", data={'pw': smsPass, 'msg': '2'})
             smsSent2 = True
             smsPar2 = "1"
     
     if (inverter == '0') and (inverterPre == '1') and (a5Value < 1.0) and (not smsSent3):
-        requests.post("http://192.168.2.172/nyof_alarm.php", data={'pw': smsPass, 'msg': '3'})
+        # sms sender api url with IP address
+        requests.post("http://***.***.***.***/nyof_alarm.php", data={'pw': smsPass, 'msg': '3'})
         smsSent3 = True
         smsPar3 = "1"
     

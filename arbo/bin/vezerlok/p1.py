@@ -28,8 +28,8 @@ g25Path = '/sys/bus/w1/devices/' + g25 + '/w1_slave'
 g25Exists = True
 g27Exists = True
 
-serverURL = '192.168.5.153'
-#serverURL = '192.168.88.2'
+# server url ip address
+serverURL = '***.***.***.***'
 apiService = "http://" + serverURL + "/index.php"
 apiTimeout = 5
 

@@ -11,7 +11,7 @@ GPIO.setmode(GPIO.BCM)
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-#serverURL = '192.168.5.153'
+# loopback address
 serverURL = '127.0.0.1'
 apiService = "http://" + serverURL + "/index.php"
 

@@ -2,16 +2,14 @@
 const axios = require("axios");
 
 var postData = {
-  from: "447537404817",
-  to: ["36202300508"],
-//  to: ["36203475260"], //próba
+  from: "****SENDER*PHONE*ADDRESS******",
+  to: ["***RECIPIENT*PHONE*ADDRESS*I.******"],
   body: "SZIVATTYU GEPHAZ: A NYOMAS MAGAS!!! (NYOMAS > 8.0 BAR)",
 };
 
 var postData2 = {
-  from: "447537404817",
-  to: ["36202603476"],
-//  to: ["36203475260"], //próba
+  from: "****SENDER*PHONE*ADDRESS******",
+  to: ["***RECIPIENT*PHONE*ADDRESS*II.******"],
   body: "SZIVATTYU GEPHAZ: A NYOMAS MAGAS!!! (NYOMAS > 8.0 BAR)",
 };
 
@@ -49,12 +47,12 @@ fs.writeFile('/home/csaba/nyof/proba.txt', postData.body, (err) => {
 const axiosConfig = {
   headers: {
     "Content-Type": "application/json",
-    Authorization: "Bearer ............",
+    Authorization: "Bearer .....SINCH.API.BEARER TOKEN........",
   },
 };
 
 axios.post(
-    "https://sms.api.sinch.com/xms/v1/............/batches",
+    "https://sms.api.sinch.com/xms/v1/....YOUR.SINCH.ID...../batches",
     postData,
     axiosConfig
   )
@@ -63,7 +61,7 @@ axios.post(
 
     setTimeout(function () {
       axios.post(
-        "https://sms.api.sinch.com/xms/v1/............/batches",
+        "https://sms.api.sinch.com/xms/v1/....YOUR.SINCH.ID...../batches",
         postData2,
         axiosConfig
       )
@@ -81,7 +79,7 @@ axios.post(
 
     setTimeout(function () {
       axios.post(
-        "https://sms.api.sinch.com/xms/v1/............/batches",
+        "https://sms.api.sinch.com/xms/v1/....YOUR.SINCH.ID...../batches",
         postData2,
         axiosConfig
       )
