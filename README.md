@@ -79,6 +79,7 @@ A P3 számítógép port kiosztása:
 |Indukciós áramlásmérő|A3| | |
 |Nyomásmérő 1.|A4| | |
 |Nyomásmérő 2.|A5| | |
+
 \
 ahol:\
 Axx: Analóg portok\
